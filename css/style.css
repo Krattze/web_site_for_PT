@@ -18,6 +18,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: right;
+
 }
 
 .img_size {
@@ -49,4 +50,23 @@ body {
     background-size: 100%;
     width: 100px;
     height: 100px;
+}
+.button_js{
+    text-align: center;
+}
+
+#my_btn{
+    border: none;
+    border-radius: 10px;
+    background-color: darkblue;
+    color: whitesmoke;
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+}
+
+#demo img {
+    margin-top: 10px;
+    width: 100px;
+    height: 200px;
 }
