@@ -21,8 +21,14 @@ body {
 
 }
 
+.form_reg input {
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 .mem {
-    font-size:24px;
+    font-size: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,8 +36,8 @@ body {
 }
 
 .title_photo {
-    text-align:center;
-    font-size:18px;
+    text-align: center;
+    font-size: 18px;
 }
 
 .my_photo {
@@ -48,11 +54,12 @@ body {
     width: 100px;
     height: 100px;
 }
-.button_js{
+
+.button_js {
     text-align: center;
 }
 
-#my_btn{
+#my_btn {
     border: none;
     border-radius: 10px;
     background-color: darkblue;
@@ -68,7 +75,7 @@ body {
     height: 200px;
 }
 
-.index{
+.index {
     text-align: center;
     font-weight: bold;
 }
