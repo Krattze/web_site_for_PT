@@ -21,9 +21,6 @@ body {
 
 }
 
-.img_size {
-}
-
 .mem {
     font-size:24px;
     display: flex;
@@ -51,7 +48,6 @@ body {
     width: 100px;
     height: 100px;
 }
-<<<<<<< HEAD
 .button_js{
     text-align: center;
 }
@@ -71,7 +67,8 @@ body {
     width: 100px;
     height: 200px;
 }
-=======
 
->dsfsdfsdf
->>>>>>> 7d01adf691b3b2eec0b8ed186e13a4c64b303a95
+.index{
+    text-align: center;
+    font-weight: bold;
+}
