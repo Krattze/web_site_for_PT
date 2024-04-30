@@ -37,7 +37,7 @@ require_once("db.php");
 if (isset($_COOKIE['User'])) {
     header("Location: login.php");
 }
-$link = mysqli_connect('127.0.0.1', 'root', 'qwerty', 'PT_Site');
+$link = mysqli_connect('db', 'root', 'kali', 'PT_Site');
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $username = $_POST['login'];

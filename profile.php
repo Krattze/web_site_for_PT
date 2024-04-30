@@ -62,9 +62,10 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-6">
-            <form action="profile.php" method="post">
+            <form action="profile.php" method="post" enctype="multipart/form-data" name="upload">
                 <div class="row form_reg mb-3"><input type="text" class="form rounded" name="title" placeholder="Заголовок поста"></div>
                 <div class="row form_reg mb-3"><textarea cols="30" rows="10" class="form rounded" name="text" placeholder="Введите текст поста"></textarea></div>
+                <div class="row form_reg mb-3"><input type="file" class="form rounded" name="file"></br></div>
                 <div class="form_reg text-center mb-3">
                     <button class="btn btn-primary btn_reg" type="submit" name="submit">Сохранить пост</button>
                 </div>
@@ -77,7 +78,7 @@
 </html>
 <?php   
 require_once("db.php");
-$link = mysqli_connect('127.0.0.1', 'root', 'qwerty', 'PT_Site');
+$link = mysqli_connect('db', 'root', 'kali', 'PT_Site');
 if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $main_text = $_POST['text'];
@@ -88,4 +89,21 @@ if (isset($_POST['submit'])) {
     if(!mysqli_query($link, $sql)) {
     echo "Не удалось добавить пост";
     }
+    if(!empty($_FILES["file"]))
+    {
+        if (((@$_FILES["file"]["type"] == "image/gif") || (@$_FILES["file"]["type"] == "image/jpeg")
+        || (@$_FILES["file"]["type"] == "image/jpg") || (@$_FILES["file"]["type"] == "image/pjpeg")
+        || (@$_FILES["file"]["type"] == "image/x-png") || (@$_FILES["file"]["type"] == "image/png"))
+        && (@$_FILES["file"]["size"] < 102400))
+        {
+            move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $_FILES["file"]["name"]);
+            echo "Load in:  " . "upload/" . $_FILES["file"]["name"];
+        }
+        else
+        {
+            echo "upload failed!";
+        }
+    }
 }
+
+?>

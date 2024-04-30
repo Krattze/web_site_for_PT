@@ -79,3 +79,8 @@ body {
     text-align: center;
     font-weight: bold;
 }
+
+a {
+    display: inline-block;
+    margin-bottom: 3px;
+}
